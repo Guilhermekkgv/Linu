@@ -39,8 +39,8 @@ local function detectDevice()
 end
 
 local Linux = {}
-Linux.CurrentTheme = "Purple"
-Linux.SelectedTheme = "Purple"
+Linux.CurrentTheme = "Green"
+Linux.SelectedTheme = "Green"
 Linux.Themes = {
     Purple = Color3.fromRGB(138, 43, 226),
     Blue = Color3.fromRGB(59, 130, 246),
@@ -52,8 +52,8 @@ Linux.CurrentTab = nil
 Linux.DeviceType = detectDevice()
 Linux.ActiveNotifications = {}
 Linux.NotificationCounter = 0
-Linux.FrameTransparency = 0.82
-Linux.FrameColor = Color3.fromRGB(70, 70, 70)
+Linux.FrameTransparency = 0.85
+Linux.FrameColor = Color3.fromRGB(50, 50, 50)
 
 Linux.IgnoredElements = {}
 
@@ -116,7 +116,7 @@ function Linux.LoadThemeSettings()
         if readfile and isfile(Linux.ConfigFolder .. "/theme.json") then
             local json = readfile(Linux.ConfigFolder .. "/theme.json")
             local themeData = HttpService:JSONDecode(json)
-            Linux.CurrentTheme = themeData.Theme or "Purple"
+            Linux.CurrentTheme = themeData.Theme or "Green"
             Linux.SelectedTheme = Linux.CurrentTheme
             return true
         else
